@@ -2,11 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Award, GraduationCap, Briefcase, Sparkles } from "lucide-react";
 import CardTilt from "./CardTilt";
+import { getAssetUrl } from "../utils/assetPath";
 
 const experiences = [
   {
     company: "Epsilon",
-    logo: "/assets/images/companies/company-1.jpg",
+    logo: getAssetUrl("assets/images/companies/company-1.jpg"),
     role: "Associate Software Engineer",
     dates: "Feb 2025 — Present",
     location: "Bengaluru, India",
@@ -18,7 +19,7 @@ const experiences = [
   },
   {
     company: "Cochin Shipyard Ltd",
-    logo: "/assets/images/companies/company-2.svg",
+    logo: getAssetUrl("assets/images/companies/company-2.svg"),
     role: "IT & Automation Intern",
     dates: "April 2024 — June 2024",
     location: "Kochi, India",
@@ -50,7 +51,7 @@ const AboutExperience = () => {
             <div className="absolute -inset-4 border border-accent/20 translate-x-3 translate-y-3 pointer-events-none group-hover:translate-x-1 group-hover:translate-y-1 transition-all duration-700" />
             <div className="aspect-square w-full sm:w-[500px] overflow-hidden rounded-sm relative grayscale hover:grayscale-0 transition-all duration-1000 bg-surface">
               <img
-                src="/assets/images/about-photo.jpg"
+                src={getAssetUrl("assets/images/about-photo.jpg")}
                 alt="About Savio Mohan"
                 className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
               />

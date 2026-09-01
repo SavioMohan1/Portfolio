@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import CardTilt from "./CardTilt";
+import { getAssetUrl } from "../utils/assetPath";
 
 const roles = ["Full-Stack & Systems Engineer", "GenAI & LLM Solutions", "Database Architect", "UI/UX Creative Developer"];
 
@@ -101,7 +102,7 @@ const Hero = () => {
               View Projects
             </a>
             <a
-              href="/assets/docs/resume.pdf"
+              href={getAssetUrl('assets/docs/resume.pdf')}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 border border-accent/30 text-accent font-mono text-xs tracking-widest uppercase font-bold hover:border-accent hover:bg-accent/5 transition-all duration-300"
@@ -131,7 +132,7 @@ const Hero = () => {
               
               <div className="w-full h-full p-2 bg-surface rounded-sm border border-white/10 shadow-2xl overflow-hidden relative group">
                 <img
-                  src="/assets/images/profile-photo.jpg"
+                  src={getAssetUrl('assets/images/profile-photo.jpg')}
                   alt="Savio Mohan"
                   className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105 group-hover:scale-100"
                 />
